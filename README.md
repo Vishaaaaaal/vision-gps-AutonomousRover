@@ -8,7 +8,7 @@ A scalable, hybrid autonomous navigation system for small-scale outdoor rovers u
 
 This project showcases a **vision-first autonomous driving prototype** that combines:
 - Global navigation via **u-blox NEO-M9N GPS** + **Google Maps Directions API**
-- Local, reactive perception through **ZED 2i stereo vision**, **YOLOv5** obstacle detection, and **LaneNet**-based lane following
+- Local, reactive perception through **ZED 2i stereo vision**, **a custom YOLOv5 model** based obstacle detection, and **LaneNet**-based lane following
 - A hybrid ROS 1 + ROS 2 architecture for modular control
 - An Arduino-based actuator system (linear + stepper)
 - Real-time GUI for visual feedback and interactive routing
@@ -20,7 +20,7 @@ Developed as a final-year B.Tech project under the **Department of Mechatronics 
 ## 🎯 Key Features
 
 - **Dynamic GPS path planning** with Google Maps API
-- **YOLOv5 obstacle detection** (depth-filtered for precision)
+- **custom trained YOLOv5 obstacle detection along with depth-filtered logic for precision **
 - **LaneNet-based curved lane detection**
 - **ROS 1/2 hybrid architecture** bridged via TCP sockets
 - **Live GUI**: Map tracking, ETA, and manual rerouting
