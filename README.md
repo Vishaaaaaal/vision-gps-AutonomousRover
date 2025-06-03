@@ -32,6 +32,7 @@ Developed as a final-year B.Tech project under the **Department of Mechatronics 
 
 ## 🧠 System Architecture
 
+<img width="405" alt="Image" src="https://github.com/user-attachments/assets/2a2f9296-cf48-4b87-b57b-bb66dfc8d44d" />
 ![System Block Diagram](docs/system_architecture.png) <!-- Add diagram here -->
 
 - **Global Planner**: Generates waypoints from current GPS location to destination using Google Maps.
