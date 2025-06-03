@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vision Assisted Autonomous Driving System</title>
   <style>
+    /* Base styling */
     body {
       font-family: "Open Sans", Helvetica, Arial, sans-serif;
       margin: 2rem;
@@ -12,28 +13,68 @@
       color: #222;
       background-color: #f9f9f9;
     }
-    header h1 {
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header container */
+    .header-container {
+      margin-bottom: 2rem;
+    }
+    .header-title {
       font-size: 2rem;
-      margin-bottom: 0.25rem;
+      margin: 0;
+      line-height: 1.2;
     }
-    header p {
-      margin-top: 0;
-      font-style: italic;
+    .header-subtitle {
+      font-size: 1rem;
+      margin: 0.25rem 0 1rem 0;
+      color: #555;
     }
-    #authors p {
+    .authors-list {
+      font-size: 1rem;
       margin-bottom: 1rem;
     }
-    #links a {
+    .authors-list a {
       color: #0066cc;
-      text-decoration: none;
-      margin: 0 0.5rem;
+      margin-right: 0.5rem;
     }
-    #links a:hover {
+    .authors-list a:hover {
       text-decoration: underline;
     }
+
+    /* Link buttons */
+    .link-buttons a {
+      display: inline-flex;
+      align-items: center;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+      padding: 0.4rem 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #fff;
+      font-size: 0.95rem;
+      color: #333;
+    }
+    .link-buttons a:hover {
+      background-color: #e6e6e6;
+      border-color: #999;
+    }
+    .link-buttons a .icon {
+      margin-right: 0.4rem;
+      font-size: 1.1rem;
+    }
+
+    /* Section styling */
     section {
       margin-bottom: 1.5rem;
     }
+    #abstract p {
+      margin-bottom: 1rem;
+    }
+
+    /* Footer styling */
     footer {
       margin-top: 3rem;
       font-size: 0.9rem;
@@ -44,31 +85,41 @@
   </style>
 </head>
 <body>
-  <!-- Header / Title -->
-  <header>
-    <h1>Vision Assisted Autonomous Driving System</h1>
-    <p><strong>SRM Institute of Science and Technology</strong></p>
-  </header>
+  <!-- Header / Title and Buttons -->
+  <div class="header-container">
+    <h1 class="header-title">Vision Assisted Autonomous Driving System</h1>
+    <p class="header-subtitle">Robotics: Science and Systems (RSS) 2025 | SRM Institute of Science and Technology</p>
 
-  <!-- Author List (with links) -->
-  <section id="authors">
-    <p>
-      <a href="https://github.com/VishalRajeev" target="_blank" rel="noopener">Vishal Rajeev</a>,
-      <a href="https://github.com/alanjoseph" target="_blank" rel="noopener">Alan Joseph</a>,
-      <a href="https://github.com/ArdraManoj" target="_blank" rel="noopener">Ardra Manoj</a><br />
-      <em>Batch No.: MHP-04, Department of Mechatronics Engineering</em>
-    </p>
-  </section>
+    <!-- Authors List -->
+    <div class="authors-list">
+      <a href="https://github.com/VishalRajeev" target="_blank" rel="noopener">Vishal Rajeev</a>
+      <a href="https://github.com/alanjoseph" target="_blank" rel="noopener">Alan Joseph</a>
+      <a href="https://github.com/ArdraManoj" target="_blank" rel="noopener">Ardra Manoj</a>
+      <span style="color: #333;">&nbsp;&mdash;&nbsp;University of California, SRMIST</span>
+    </div>
 
-  <!-- Resource Links -->
-  <section id="links">
-    <p>
-      <a href="https://github.com/Vishaaaaaal/vision-gps-AutonomousRover" target="_blank" rel="noopener">GitHub Repo</a>|
-      <a href="https://github.com/Vishaaaaaal/vision-gps-AutonomousRover/raw/main/MHP_04_Autonomous_Report_Final.pdf" target="_blank" rel="noopener">Paper (PDF)</a>|
-      <a href="https://github.com/Vishaaaaaal/vision-gps-AutonomousRover#documentation" target="_blank" rel="noopener">Documentation</a>|
-      <a href="https://github.com/Vishaaaaaal/vision-gps-AutonomousRover/releases" target="_blank" rel="noopener">Releases</a>
-    </p>
-  </section>
+    <!-- Link Buttons -->
+    <div class="link-buttons">
+      <a href="https://github.com/Vishaaaaaal/vision-gps-AutonomousRover" target="_blank" rel="noopener">
+        <span class="icon">💻</span>Code
+      </a>
+      <a href="https://github.com/Vishaaaaaal/vision-gps-AutonomousRover/raw/main/MHP_04_Autonomous_Report_Final.pdf" target="_blank" rel="noopener">
+        <span class="icon">📄</span>Paper
+      </a>
+      <a href="https://arxiv.org/abs/your-arxiv-id" target="_blank" rel="noopener">
+        <span class="icon">📰</span>arXiv
+      </a>
+      <a href="https://youtu.be/your-video-id" target="_blank" rel="noopener">
+        <span class="icon">🎥</span>Video
+      </a>
+      <a href="https://github.com/Vishaaaaaal/vision-gps-AutonomousRover#documentation" target="_blank" rel="noopener">
+        <span class="icon">📑</span>Documentation
+      </a>
+      <a href="https://github.com/Vishaaaaaal/vision-gps-AutonomousRover/releases" target="_blank" rel="noopener">
+        <span class="icon">🔖</span>Releases
+      </a>
+    </div>
+  </div>
 
   <!-- Main Description / Abstract -->
   <section id="abstract">
