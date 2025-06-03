@@ -28,6 +28,13 @@ Developed as a final-year B.Tech project under the **Department of Mechatronics 
 - **Potentiometer-based closed-loop steering feedback**
 - **Failsafe depth-only emergency stop logic**
 
+
+## ⚙️ Model:
+
+
+<img width="579" alt="Image" src="https://github.com/user-attachments/assets/074c7fdf-c1be-4c80-b9c9-b9f1691919eb" />
+
+
 ---
 
 ## 🧠 System Architecture
@@ -80,6 +87,10 @@ Developed as a final-year B.Tech project under the **Department of Mechatronics 
 
 ## 🚗 Control Logic
 
+
+<img width="333" alt="Image" src="https://github.com/user-attachments/assets/ab45af41-82df-421d-be6b-eec856ab9832" />
+
+
 | Input Type     | Action                                |
 |----------------|----------------------------------------|
 | GPS Position   | Starts global planner waypoint parsing |
@@ -87,6 +98,14 @@ Developed as a final-year B.Tech project under the **Department of Mechatronics 
 | Lane Curvature | Triggers pre-emptive turns            |
 | Potentiometer  | Closes feedback loop for steering      |
 | GUI/Socket     | Sends command strings to Arduino       |
+
+
+
+<img width="600" alt="Image" src="https://github.com/user-attachments/assets/ea0f6aa6-a3b0-4938-9727-7b31e4ac825d" />
+
+
+<img width="610" alt="Image" src="https://github.com/user-attachments/assets/dffc07a3-7e01-46f8-9424-3ccfa755073b" />
+
 
 ---
 
