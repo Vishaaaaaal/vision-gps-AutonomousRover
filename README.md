@@ -32,14 +32,14 @@ Developed as a final-year B.Tech project under the **Department of Mechatronics 
 ## ⚙️ Model:
 
 
-<img width="579" alt="Image" src="https://github.com/user-attachments/assets/074c7fdf-c1be-4c80-b9c9-b9f1691919eb" />
+<img width="300" alt="Image" src="https://github.com/user-attachments/assets/074c7fdf-c1be-4c80-b9c9-b9f1691919eb" />
 
 
 ---
 
 ## 🧠 System Architecture
 
-<img width="405" alt="Image" src="https://github.com/user-attachments/assets/2a2f9296-cf48-4b87-b57b-bb66dfc8d44d" />
+<img width="300" alt="Image" src="https://github.com/user-attachments/assets/2a2f9296-cf48-4b87-b57b-bb66dfc8d44d" />
 
 
 - **Global Planner**: Generates waypoints from current GPS location to destination using Google Maps.
@@ -76,7 +76,7 @@ Developed as a final-year B.Tech project under the **Department of Mechatronics 
 
 ## 🖥️ GUI Preview
 
-<img width="600" alt="Image" src="https://github.com/user-attachments/assets/5d7f8d2e-1223-4037-af54-411cecafbbc7" />
+<img width="500" alt="Image" src="https://github.com/user-attachments/assets/5d7f8d2e-1223-4037-af54-411cecafbbc7" />
 
 
 - Route selection with map click
@@ -88,7 +88,7 @@ Developed as a final-year B.Tech project under the **Department of Mechatronics 
 ## 🚗 Control Logic
 
 
-<img width="333" alt="Image" src="https://github.com/user-attachments/assets/ab45af41-82df-421d-be6b-eec856ab9832" />
+<img width="300" alt="Image" src="https://github.com/user-attachments/assets/ab45af41-82df-421d-be6b-eec856ab9832" />
 
 
 | Input Type     | Action                                |
@@ -101,10 +101,10 @@ Developed as a final-year B.Tech project under the **Department of Mechatronics 
 
 
 
-<img width="600" alt="Image" src="https://github.com/user-attachments/assets/ea0f6aa6-a3b0-4938-9727-7b31e4ac825d" />
+<img width="400" alt="Image" src="https://github.com/user-attachments/assets/ea0f6aa6-a3b0-4938-9727-7b31e4ac825d" />
 
 
-<img width="610" alt="Image" src="https://github.com/user-attachments/assets/dffc07a3-7e01-46f8-9424-3ccfa755073b" />
+<img width="400" alt="Image" src="https://github.com/user-attachments/assets/dffc07a3-7e01-46f8-9424-3ccfa755073b" />
 
 
 ---
