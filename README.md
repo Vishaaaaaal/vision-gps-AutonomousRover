@@ -69,6 +69,9 @@ Developed as a final-year B.Tech project under the **Department of Mechatronics 
 
 ## 🖥️ GUI Preview
 
+<img width="696" alt="Image" src="https://github.com/user-attachments/assets/5d7f8d2e-1223-4037-af54-411cecafbbc7" />
+
+
 ![Map GUI](docs/gui_live.png)
 - Route selection with map click
 - Displays ETA, distance, and obstacle alerts
