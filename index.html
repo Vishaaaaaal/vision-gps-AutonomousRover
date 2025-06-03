@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vision Assisted Autonomous Driving System</title>
+  <style>
+    body {
+      font-family: "Open Sans", Helvetica, Arial, sans-serif;
+      margin: 2rem;
+      line-height: 1.6;
+      color: #222;
+      background-color: #f9f9f9;
+    }
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.25rem;
+    }
+    header p {
+      margin-top: 0;
+      font-style: italic;
+    }
+    #authors p {
+      margin-bottom: 1rem;
+    }
+    #links a {
+      color: #0066cc;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    #links a:hover {
+      text-decoration: underline;
+    }
+    section {
+      margin-bottom: 1.5rem;
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #555;
+      border-top: 1px solid #eee;
+      padding-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / Title -->
+  <header>
+    <h1>Vision Assisted Autonomous Driving System</h1>
+    <p><strong>SRM Institute of Science and Technology</strong></p>
+  </header>
+
+  <!-- Author List (with links) -->
+  <section id="authors">
+    <p>
+      <a href="https://github.com/VishalRajeev" target="_blank" rel="noopener">Vishal Rajeev</a>,
+      <a href="https://github.com/alanjoseph" target="_blank" rel="noopener">Alan Joseph</a>,
+      <a href="https://github.com/ArdraManoj" target="_blank" rel="noopener">Ardra Manoj</a><br />
+      <em>Batch No.: MHP-04, Department of Mechatronics Engineering</em>
+    </p>
+  </section>
+
+  <!-- Resource Links -->
+  <section id="links">
+    <p>
+      <a href="https://github.com/Vishaaaaaal/vision-gps-AutonomousRover" target="_blank" rel="noopener">GitHub Repo</a>|
+      <a href="https://github.com/Vishaaaaaal/vision-gps-AutonomousRover/raw/main/MHP_04_Autonomous_Report_Final.pdf" target="_blank" rel="noopener">Paper (PDF)</a>|
+      <a href="https://github.com/Vishaaaaaal/vision-gps-AutonomousRover#documentation" target="_blank" rel="noopener">Documentation</a>|
+      <a href="https://github.com/Vishaaaaaal/vision-gps-AutonomousRover/releases" target="_blank" rel="noopener">Releases</a>
+    </p>
+  </section>
+
+  <!-- Main Description / Abstract -->
+  <section id="abstract">
+    <p>
+      This project presents the development of a vision-assisted autonomous navigation system for a rover designed to operate in semi-structured outdoor environments. The system integrates a GPS-based global planner using the NEO-M9N module and the Google Maps Directions API, generating real-time waypoints from live position data. To enable dynamic path correction and obstacle avoidance, a ZED 2i stereo camera is used in combination with a custom-trained YOLOv5 model for object detection and LaneNet for lane following. Depth filtering is applied to detect obstacles to reduce false positives, while an emergency stop system based on raw depth ensures safety.
+    </p>
+    <p>
+      A hybrid control architecture is implemented using ROS Noetic (ROS 1) for actuator control and ROS 2 for vision modules, with a TCP socket bridge facilitating inter-process communication. The Arduino Nano controls a linear actuator for steering and a NEMA-23 stepper motor for throttle based on ROS commands. Feedback loops using potentiometer data allow steering estimation and correction in real time.
+    </p>
+    <p>
+      Additionally, a PyQt5-based GUI enables route visualization, ETA tracking, and destination selection through an interactive map. Real-time system states including live video, obstacle markers, and lane overlays are visualized using both RViz and OpenCV windows for debugging and analysis.
+    </p>
+    <p>
+      This modular and scalable system provides an end-to-end solution for autonomous rover navigation, combining map-based path planning, real-time perception, and robust actuation control. The proposed architecture serves as a practical framework for future extensions in urban robotics and autonomous delivery platforms.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Vishal Rajeev, Alan Joseph, Ardra Manoj – Licensed under MIT License</p>
+  </footer>
+</body>
+</html>
