@@ -3,49 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Project Title</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Vision Assisted Autonomous Driving System</title>
+  <!-- Google Fonts: Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
       display: flex;
       justify-content: center;
-      align-items: flex-start; /* align to top */
+      align-items: flex-start;
       min-height: 100vh;
+      background: #fff;
+      font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #111827;
     }
     .container {
-      max-width: 800px;
-      padding: 40px;
-      text-align: center;
+      width: 100%;
+      max-width: 960px;
+      padding: 40px 20px;
+      text-align: left;
     }
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.75rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
-    }
-    .subtitle {
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
-      color: #4b5563;
+      line-height: 1.2;
     }
     .authors {
       margin-bottom: 0.5rem;
+      font-size: 1rem;
+      font-weight: 500;
     }
     .authors a {
       color: #3b82f6;
       text-decoration: none;
-      font-weight: 600;
-      margin: 0 6px;
+      margin-right: 8px;
     }
     .affiliation {
       margin-bottom: 2rem;
       color: #374151;
+      font-size: 1rem;
+      font-weight: 400;
     }
     .links {
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+      justify-content: space-evenly;
       gap: 1rem;
     }
     .links a {
@@ -58,14 +61,15 @@
       text-decoration: none;
       color: #111827;
       font-weight: 500;
+      font-size: 0.95rem;
       transition: background 0.2s;
     }
     .links a:hover {
       background: #f9fafb;
     }
     .links svg {
-      width: 1rem;
-      height: 1rem;
+      width: 1.25rem;
+      height: 1.25rem;
       fill: currentColor;
     }
   </style>
@@ -73,38 +77,22 @@
 <body>
   <div class="container">
     <h1>Vision Assisted Autonomous Driving System</h1>
-    <div class="subtitle">  </div>
     <div class="authors">
-      <a href="#">Vishal Rajeev</a>,
-      <a href="#">Alan Joseph</a>,
-      <a href="#">Ardra Manoj</a>
+      <a href="https://github.com/Vishaaaaaal" target="_blank">Vishal Rajeev</a>
     </div>
     <div class="affiliation">SRM Institute of Science and Technology</div>
     <div class="links">
-      <a href="MHP%2004%20AUTONOMOUS%20REPORT%20Final.pdf" target="_blank">
-        <!-- Document icon -->
+      <a href="https://github.com/Vishaaaaaal/vision-gps-AutonomousRover/blob/main/MHP%2004%20AUTONOMOUS%20REPORT%20Final.pdf" target="_blank">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2h7l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/><path d="M13 2v6h6"/></svg>
         Paper
       </a>
-      <a href="https://arxiv.org/" target="_blank">
-        <!-- arXiv icon placeholder -->
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/></svg>
-        arXiv
-      </a>
-      <a href="#" target="_blank">
-        <!-- Video icon -->
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16v16H4z"/><polygon points="10,8 16,12 10,16" fill="#fff"/></svg>
+      <a href="https://www.youtube.com/" target="_blank">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 8l6 4-6 4V8z"/></svg>
         Video
       </a>
-      <a href="#" target="_blank">
-        <!-- Code icon -->
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      <a href="https://github.com/Vishaaaaaal/vision-gps-AutonomousRover" target="_blank">
+        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.724-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.234 1.84 1.234 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.467-2.382 1.235-3.222-.123-.303-.535-1.527.117-3.176 0 0 1.008-.323 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.289-1.553 3.295-1.23 3.295-1.23.653 1.649.241 2.873.118 3.176.77.84 1.233 1.912 1.233 3.222 0 4.61-2.804 5.624-5.476 5.921.43.37.823 1.102.823 2.222v3.293c0 .319.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
         Code
-      </a>
-      <a href="#" target="_blank">
-        <!-- Documentation icon -->
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 2h16v20H4z"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/></svg>
-        Documentation
       </a>
     </div>
   </div>
