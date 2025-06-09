@@ -80,10 +80,10 @@
       height: auto;
       border-radius: 1rem;
     }
-    .abstract {
+    .abstract, .architecture {
       margin-top: 3rem;
     }
-    .abstract h2 {
+    .abstract h2, .architecture h2 {
       font-size: 1.5rem;
       font-weight: 600;
       margin-bottom: 0.5rem;
@@ -92,6 +92,31 @@
       font-size: 1rem;
       line-height: 1.6;
       color: #374151;
+    }
+    .architecture h3 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+    .architecture h4 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-top: 1rem;
+      margin-bottom: 0.25rem;
+      color: #374151;
+    }
+    .architecture ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+      color: #374151;
+    }
+    .architecture code {
+      background: #f3f4f6;
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.25rem;
+      font-family: monospace;
     }
   </style>
 </head>
@@ -106,17 +131,17 @@
     <div class="affiliation">SRM Institute of Science and Technology</div>
     <div class="links">
       <a href="https://github.com/Vishaaaaaal/vision-gps-AutonomousRover/blob/main/MHP%2004%20AUTONOMOUS%20REPORT%20Final.pdf" target="_blank">
+        <!-- Paper SVG -->
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2h7l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/><path d="M13 2v6h6"/></svg>
         Paper
       </a>
       <a href="https://www.youtube.com/" target="_blank">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path fill="#FF0000" d="M23.498 6.186a2.963 2.963 0 0 0-2.082-2.096C19.679 3.5 12 3.5 12 3.5s-7.679 0-9.416 .59a2.963 2.963 0 0 0-2.082 2.096A30.058 30.058 0 0 0 0 12a30.058 30.058 0 0 0 .502 5.814 2.963 2.963 0 0 0 2.082 2.096C4.321 20.5 12 20.5 12 20.5s7.679 0 9.416-.59a2.963 2.963 0 0 0 2.082-2.096A30.058 30.058 0 0 0 24 12a30.058 30.058 0 0 0-.502-5.814z"/>
-          <path fill="#fff" d="M9.545 15.568v-7.136L16.09 12l-6.545 3.568z"/>
-        </svg>
+        <!-- Video SVG -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#FF0000" d="M23.498 6.186a2.963 2.963 0 0 0-2.082-2.096C19.679 3.5 12 3.5 12 3.5s-7.679 0-9.416 .59a2.963 2.963 0 0 0-2.082 2.096A30.058 30.058 0 0 0 0 12a30.058 30.058 0 0 0 .502 5.814 2.963 2.963 0 0 0 2.082 2.096C4.321 20.5 12 20.5 12 20.5s7.679 0 9.416-.59a2.963 2.963 0 0 0 2.082-2.096A30.058 30.058 0 0 0 24 12a30.058 30.058 0 0 0-.502-5.814z"/><path fill="#fff" d="M9.545 15.568v-7.136L16.09 12l-6.545 3.568z"/></svg>
         Video
       </a>
       <a href="https://github.com/Vishaaaaaal/vision-gps-AutonomousRover" target="_blank">
+        <!-- Code SVG -->
         <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.724-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.234 1.84 1.234 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.467-2.382 1.235-3.222-.123-.303-.535-1.527.117-3.176 0 0 1.008-.323 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.289-1.553 3.295-1.23 3.295-1.23.653 1.649.241 2.873.118 3.176.77.84 1.233 1.912 1.233 3.222 0 4.61-2.804 5.624-5.476 5.921.43.37.823 1.102.823 2.222v3.293c0 .319.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
         Code
       </a>
@@ -136,6 +161,56 @@
     <!-- Diagram section -->
     <div class="hero-image">
       <img src="webassets/Parts.png" alt="System Diagram">
+    </div>
+
+    <!-- System Architecture section -->
+    <div class="architecture">
+      <h2>System Architecture: Hardware, Software, and Methodology</h2>
+      <h3>Hardware Foundation:</h3>
+      <ul>
+        <li>The rover is based on a rigid frame platform, custom-welded to house key components, and features a four-bar Ackermann steering mechanism with rear-wheel chain drive. A dedicated mount elevates the ZED 2i stereo camera for an optimal forward field of view.</li>
+      </ul>
+      <h4>Actuators:</h4>
+      <ul>
+        <li><strong>Steering:</strong> A 12V linear actuator controls the front wheels, extending and retracting linkages within a calibrated range of +22&deg; to &minus;22&deg;.</li>
+        <li><strong>Throttle:</strong> A NEMA-23 stepper motor physically twists a handle throttle, connected to a 24V brushed DC motor (MY1016Z2), operating in open-loop mode where steps are mapped to specific speeds.</li>
+      </ul>
+      <h4>Sensors:</h4>
+      <ul>
+        <li><strong>GPS:</strong> A u-blox NEO-M9N GPS receiver provides real-time position data via UART, crucial for global navigation and route planning using the Google Maps Directions API.</li>
+        <li><strong>Vision:</strong> The ZED 2i stereo camera is the primary perception sensor, capturing RGB images, depth maps, and IMU-based orientation data.</li>
+        <li><strong>Feedback:</strong> A rotary potentiometer attached to the steering system provides analog voltage feedback, allowing real-time estimation and correction of the steering angle.</li>
+      </ul>
+      <h4>Microcontroller & Computation:</h4>
+      <ul>
+        <li>An Arduino Nano handles low-level actuator control and sensor feedback, communicating via ROS Serial. High-level processing, including the ROS-based navigation stack, YOLO-based object detection, Google Maps API waypoint planning, and kinematic model translation, runs on an onboard laptop. The power system consists of dual 12V lead-acid batteries providing 24V.</li>
+      </ul>
+
+      <h3>Software Architecture and Methodology:</h3>
+      <div class="subsection">
+        <h4>Global Planning:</h4>
+        <ul>
+          <li>The GPS Listener Node establishes serial connection with the NEO-M9N module, parses NMEA sentences for latitude and longitude, and publishes coordinates to <code>/gps_data</code>.</li>
+          <li>The Route Planner Node uses the current GPS location and a user-defined destination to query the Google Maps Directions API, receiving an encoded polyline. This polyline is decoded into waypoints and interpolated to approximately 5-meter intervals for smooth path execution, published on the <code>/route_waypoints</code> topic.</li>
+        </ul>
+        <h4>Local Perception and Obstacle Avoidance:</h4>
+        <ul>
+          <li>The ZED 2i stereo camera provides real-time RGB and depth frames.</li>
+          <li>A custom-trained YOLOv5 model detects dynamic obstacles (e.g., pedestrians, vehicles).</li>
+          <li>LaneNet performs advanced lane detection to identify road boundaries and curvature.</li>
+          <li>Depth Filtering and Failsafe: For detected objects, a corresponding depth patch is extracted, and if the average depth falls below a critical threshold (e.g., &lt;2 meters), the object is flagged as an immediate threat. A separate failsafe logic continuously monitors the raw depth map, triggering an emergency stop if any object is within 1 meter, regardless of visual detection.</li>
+        </ul>
+        <h4>Control and Decision Logic:</h4>
+        <ul>
+          <li>The Command Publisher Node, based on current position, obstacle feedback, and waypoint proximity, issues commands like <code>throttle</code>, <code>reverse_throttle</code>, or <code>stop</code> to the Arduino Nano via the <code>/nano_control</code> topic.</li>
+          <li>A hybrid decision tree prioritizes safety: emergency stops for depth &lt; 1m, soft stops for in-lane objects with depth &lt; 2m, and steering initiation when lane curvature and global planner confirm a turn. When clear, a throttle command is sent.</li>
+        </ul>
+        <h4>Visualization and Monitoring:</h4>
+        <ul>
+          <li>RViz is used for live visualization of the ZED depth point cloud, object bounding boxes, and lane markings, as well as steering angle and potentiometer data.</li>
+          <li>A PyQt5-based GUI displays a live interactive map (using Folium), showing the current GPS position, planned route, ETA, and allowing interactive destination selection. OpenCV windows also provide live camera feed overlays with object detection and lane curves.</li>
+        </ul>
+      </div>
     </div>
 
   </div>
