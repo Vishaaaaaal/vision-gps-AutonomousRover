@@ -1,0 +1,45 @@
+ros2 launch zed_wrapper zed_camera.launch.py camera_model:=zed2i pos_tracking.pos_tracking_enabled:=true general.camera_resolution:=HD720 general.camera_fps:=15
+
+
+ros2 launch rtabmap_launch rtabmap.launch.py \
+    frame_id:=zed_camera_center \
+    odom_topic:=/zed/zed_node/odom \
+    rgb_topic:=/zed/zed_node/rgb/image_rect_color \
+    depth_topic:=/zed/zed_node/depth/depth_registered \
+    camera_info_topic:=/zed/zed_node/rgb/camera_info \
+    qos_image:=2 \
+    qos_camera_info:=2 \
+    qos_odom:=2 \
+    qos_scan:=2 \
+    qos_user_data:=2 \
+    subscribe_depth:=true \
+    approx_sync:=true \
+    queue_size:=20 \
+    publish_map:=true \
+    publish_proj_map:=true \
+    subscribe_scan:=false \
+    subscribe_scan_cloud:=false \
+    wait_for_transform:=0.5 \
+    odom_sensor_sync:=true
+
+ros2 topic echo /zed/zed_node/odom
+
+ros2 topic hz /zed/zed_node/odom
+
+
+
+NEW*
+
+ros2 launch zed_display_rviz2 display_zed_cam.launch.py camera_model:=zed2i
+
+
+
+rtabmap-databaseViewer ~/.ros/rtabmap.db
+
+
+
+IMU
+ros2 launch zed_wrapper zed_camera.launch.py camera_model:=zed2i publish_imu:=true
+
+ros2 topic echo /zed/zed_node/imu/data
+
