@@ -1,0 +1,60 @@
+✅ 1️⃣ STOP AND REMOVE ANY EXISTING ROS NOETIC CONTAINER
+FIRST, STOP AND REMOVE ANY PREVIOUS CONTAINERS TO AVOID CONFLICTS:
+
+docker stop ros_noetic_persistent
+docker rm ros_noetic_persistent
+
+
+✅ 2️⃣ START DOCKER WITH REQUIRED MOUNTS
+
+docker run -it --name ros_noetic_persistent --net=host --device=/dev/ttyUSB0 -v ~/Desktop:/root/Desktop ros:noetic bash
+
+
+✅ 3️⃣ Verify the Mounted Folder
+Once inside Docker, check if keyboard_control.py is in the right place:
+
+cd /root/Desktop
+ls
+
+
+✅ 4️⃣ Set Up ROS Noetic
+Ensure ROS Noetic is properly sourced:
+
+source /opt/ros/noetic/setup.bash
+
+
+✅ 5️⃣ Ensure rosserial_python is Installed
+apt update
+apt install ros-noetic-rosserial-python -y
+
+IF INSTALLED SUCCESSFULLY, CONFIRM WITH:
+
+rospack find rosserial_python
+
+✅ 6️⃣ Start ROS Master (roscore)
+
+roscore &
+
+
+✅ 7️⃣ Start Serial Communication with Arduino
+Now, start the serial communication node to connect ROS to your Arduino:
+
+rosrun rosserial_python serial_node.py /dev/ttyUSB0
+
+
+✅ 8️⃣ Test Communication from Arduino
+Now, open another terminal on your host machine (outside Docker) and run:
+
+docker exec -it ros_noetic_persistent bash
+
+source /opt/ros/noetic/setup.bash
+
+rostopic echo /chatter
+
+
+
+
+
+docker exec -it ros_noetic_persistent bash
+
+
