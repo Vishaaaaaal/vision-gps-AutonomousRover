@@ -70,7 +70,6 @@
     .links svg {
       width: 1.25rem;
       height: 1.25rem;
-      fill: currentColor;
     }
     .hero-image {
       margin-top: 2rem;
@@ -81,13 +80,28 @@
       height: auto;
       border-radius: 1rem;
     }
+    .abstract {
+      margin-top: 3rem;
+    }
+    .abstract h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .abstract p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #374151;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Vision Assisted Autonomous Driving System</h1>
     <div class="authors">
-      <a href="https://github.com/Vishaaaaaal" target="_blank">Vishal Rajeev, Alan Joseph, Ardra Manoj</a>
+      <a href="https://github.com/Vishaaaaaal" target="_blank">Vishal Rajeev</a>,
+      <a href="https://github.com/alanjoseph" target="_blank">Alan Joseph</a>,
+      <a href="https://github.com/ardramanoj" target="_blank">Ardra Manoj</a>
     </div>
     <div class="affiliation">SRM Institute of Science and Technology</div>
     <div class="links">
@@ -96,7 +110,10 @@
         Paper
       </a>
       <a href="https://www.youtube.com/" target="_blank">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 8l6 4-6 4V8z"/></svg>
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#FF0000" d="M23.498 6.186a2.963 2.963 0 0 0-2.082-2.096C19.679 3.5 12 3.5 12 3.5s-7.679 0-9.416 .59a2.963 2.963 0 0 0-2.082 2.096A30.058 30.058 0 0 0 0 12a30.058 30.058 0 0 0 .502 5.814 2.963 2.963 0 0 0 2.082 2.096C4.321 20.5 12 20.5 12 20.5s7.679 0 9.416-.59a2.963 2.963 0 0 0 2.082-2.096A30.058 30.058 0 0 0 24 12a30.058 30.058 0 0 0-.502-5.814z"/>
+          <path fill="#fff" d="M9.545 15.568v-7.136L16.09 12l-6.545 3.568z"/>
+        </svg>
         Video
       </a>
       <a href="https://github.com/Vishaaaaaal/vision-gps-AutonomousRover" target="_blank">
@@ -105,9 +122,15 @@
       </a>
     </div>
 
-    <!-- New hero image section -->
+    <!-- Hero image section -->
     <div class="hero-image">
       <img src="webassets/aa.png" alt="Autonomous Rover collage">
+    </div>
+
+    <!-- Abstract section -->
+    <div class="abstract">
+      <h2>Abstract</h2>
+      <p>This project introduces a vision-assisted autonomous navigation system for a rover operating in semi-structured outdoor environments. The system integrates GPS-based global planning with real-time perception for dynamic path correction and obstacle avoidance. It utilizes a NEO-M9N module and Google Maps Directions API for waypoint generation, and a ZED 2i stereo camera with a custom YOLOv5 model for object detection and LaneNet for lane following. Depth filtering is incorporated for obstacle detection and an emergency stop system ensures safety. A hybrid control architecture, leveraging ROS Noetic and ROS 2, facilitates communication, with an Arduino Nano controlling steering and throttle via ROS commands. A PyQt5-based GUI provides route visualization and real-time system state monitoring, offering a comprehensive solution for autonomous rover navigation applicable to urban robotics and autonomous delivery platforms.</p>
     </div>
 
   </div>
