@@ -1,4 +1,4 @@
-# 🤖🚗 Vision-Assisted Autonomous Driving System
+# 🤖🚗 Vision-Assisted Autonomous Driving System + GPS
 
 A scalable, hybrid autonomous navigation system for small-scale outdoor rovers using real-time GPS and AI-powered visual perception.
 
