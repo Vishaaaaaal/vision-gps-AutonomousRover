@@ -1,215 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vision Assisted Autonomous Driving System</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Project Title</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* ----------------------------------------
-       1) Base / Reset
-       ---------------------------------------- */
-    html {
-      box-sizing: border-box;
-    }
-    *,
-    *::before,
-    *::after {
-      box-sizing: inherit;
+    body {
       margin: 0;
       padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #fff;
+      font-family: 'Inter', sans-serif;
     }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, 
-                   "Apple Color Emoji", "Segoe UI Emoji";
-      color: #1a1a1a;
-      line-height: 1.5;
-      background-color: #ffffff;
-      /* 2rem top/bottom margin, auto left/right to center container */
-      margin: 2rem auto;
-    }
-    a {
-      color: #0366d6;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* ----------------------------------------
-       2) Container & Layout
-       ---------------------------------------- */
     .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 1rem; /* small horizontal padding */
+      max-width: 800px;
+      padding: 40px;
+      text-align: center;
     }
-
-    /* ----------------------------------------
-       3) Header / Title / Subtitle
-       ---------------------------------------- */
-    .title {
-      font-size: 3rem;            /* matches about 48px */
-      font-weight: 400;           /* normal weight */
-      line-height: 1.2;
-      margin-bottom: 0.25rem;
-      color: #1a1a1a;
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
     }
     .subtitle {
-      font-size: 1.5rem;         /* matches about 24px */
-      font-weight: 400;
-      line-height: 1.4;
-      margin-bottom: 1rem;
-      color: #1a1a1a;
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      color: #4b5563;
     }
-
-    /* ----------------------------------------
-       4) Authors / Affiliation
-       ---------------------------------------- */
     .authors {
-      font-size: 1rem;           /* about 16px */
-      font-weight: 400;
-      line-height: 1.5;
-      margin-bottom: 0.75rem;
-      color: #1a1a1a;
+      margin-bottom: 0.5rem;
     }
     .authors a {
-      color: #0366d6;
-      font-weight: 500;
+      color: #3b82f6;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 6px;
     }
-    .authors a:hover {
-      text-decoration: underline;
-    }
-    .authors .affiliation {
-      display: block;
-      margin-top: 0.5rem;
-      font-size: 1rem;
-      font-weight: 400;
-      color: #1a1a1a;
-    }
-
-    /* ----------------------------------------
-       5) Button Bar (Pill‐shaped Buttons)
-       ---------------------------------------- */
-    .button-bar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem; /* space between buttons */
+    .affiliation {
       margin-bottom: 2rem;
+      color: #374151;
     }
-    .btn {
+    .links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .links a {
       display: inline-flex;
       align-items: center;
-      font-size: 1rem;            /* 16px */
-      font-weight: 400;
-      line-height: 1.2;
-      color: #24292f;
-      background-color: #ffffff;
-      border: 1px solid #d1d5da;
-      border-radius: 6px;
-      padding: 0.3rem 0.7rem;     /* ~6px vertically, ~12px horizontally */
-      transition: background-color 0.15s ease, border-color 0.15s ease;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border: 1px solid #d1d5db;
+      border-radius: 9999px;
+      text-decoration: none;
+      color: #111827;
+      font-weight: 500;
+      transition: background 0.2s;
     }
-    .btn:hover {
-      background-color: #f6f8fa;
-      border-color: #959da5;
+    .links a:hover {
+      background: #f9fafb;
     }
-    .btn .icon {
-      display: inline-block;
-      width: 16px;
-      height: 16px;
+    .links svg {
+      width: 1rem;
+      height: 1rem;
       fill: currentColor;
-      margin-right: 0.4rem;       /* space between icon and text */
     }
   </style>
 </head>
-
 <body>
   <div class="container">
-    <!-- 1) Title -->
-    <h1 class="title">
-      Vision Assisted Autonomous Driving System
-    </h1>
-
-    <!-- 2) Subtitle -->
-    <p class="subtitle">
-      Robotics: Science and Systems (RSS) 2025 | SRM Institute of Science and Technology
-    </p>
-
-    <!-- 3) Authors + Affiliation -->
-    <p class="authors">
-      <!-- Comma‐separated authors, each linked to their GitHub (or personal) page -->
-      <a href="https://github.com/VishalRajeev" target="_blank" rel="noopener">Vishal Rajeev</a>, 
-      <a href="https://github.com/alanjoseph" target="_blank" rel="noopener">Alan Joseph</a>, 
-      <a href="https://github.com/ArdraManoj" target="_blank" rel="noopener">Ardra Manoj</a>
-      <span class="affiliation">Department of Mechatronics Engineering, SRM Institute of Science and Technology</span>
-    </p>
-
-    <!-- 4) Button Bar -->
-    <div class="button-bar">
-      <!-- Code Button -->
-      <a class="btn" href="https://github.com/Vishaaaaaal/vision-gps-AutonomousRover" target="_blank" rel="noopener">
-        <!-- Octicon “repo” icon for Code -->
-        <svg class="icon" viewBox="0 0 16 16" aria-hidden="true">
-          <path fill-rule="evenodd"
-                d="M2 2.5A2.5 2.5 0 014.5 0h7A2.5 2.5 0 0114 2.5v11A2.5 2.5 0 0111.5 16h-7A2.5 2.5 0 012 13.5v-11zM4.5 1C3.671 1 3 1.671 3 2.5v11c0 .829.671 1.5 1.5 1.5h7c.829 0 1.5-.671 1.5-1.5v-11C13 1.671 12.329 1 11.5 1h-7zM8 4.5c.276 0 .5.224 .5.5v3.793l1.146-1.147a.5.5 0 11.708.708L8.354 10.354a.5.5 0 01-.708 0L5.646 8.854a.5.5 0 11.708-.708L7.5 8.293V5c0-.276.224-.5.5-.5z"/>
-        </svg>
-        Code
-      </a>
-
-      <!-- Paper Button -->
-      <a class="btn" href="https://github.com/Vishaaaaaal/vision-gps-AutonomousRover/raw/main/MHP_04_Autonomous_Report_Final.pdf" target="_blank" rel="noopener">
-        <!-- Octicon “file-text” icon for Paper -->
-        <svg class="icon" viewBox="0 0 16 16" aria-hidden="true">
-          <path fill-rule="evenodd"
-                d="M5.75 1.5A2.25 2.25 0 003.5 3.75v8.5c0 1.243.997 2.25 2.25 2.25h6.5c1.243 0 2.25-.997 2.25-2.25v-6.5a.75.75 0 00-1.5 0v6.5c0 .414-.336.75-.75.75h-6.5a.75.75 0 01-.75-.75v-8.5c0-.414.336-.75.75-.75h5.5a.75.75 0 000-1.5h-5.5zM6 5.25a.75.75 0 01.75-.75h4.5a.75.75 0 010 1.5h-4.5A.75.75 0 016 5.25zm0 2a.75.75 0 01.75-.75h4.5a.75.75 0 010 1.5h-4.5a.75.75 0 01-.75-.75zm0 2a.75.75 0 01.75-.75h4.5a.75.75 0 010 1.5h-4.5a.75.75 0 01-.75-.75z"/>
-        </svg>
+    <h1>Your Project Title</h1>
+    <div class="subtitle">An Engaging Subtitle for Your Project</div>
+    <div class="authors">
+      <a href="#">Vishal Rajeev</a>,
+      <a href="#">Alan Joseph</a>,
+      <a href="#">Ardra Manoj</a>
+    </div>
+    <div class="affiliation">SRM Institute of Science and Technology</div>
+    <div class="links">
+      <a href="MHP%2004%20AUTONOMOUS%20REPORT%20Final.pdf" target="_blank">
+        <!-- Document icon -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2h7l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/><path d="M13 2v6h6"/></svg>
         Paper
       </a>
-
-      <!-- arXiv Button -->
-      <a class="btn" href="https://arxiv.org/abs/your-arxiv-id" target="_blank" rel="noopener">
-        <!-- Octicon “archive” icon for arXiv (a “box” icon suggests an archival link) -->
-        <svg class="icon" viewBox="0 0 16 16" aria-hidden="true">
-          <path fill-rule="evenodd"
-                d="M1.5 2.5A.5.5 0 012 2h12a.5.5 0 01.5.5v2H1V2.5zM1 5v7.5A2.5 2.5 0 003.5 15h9A2.5 2.5 0 0015 12.5V5H1zm11 2.5H4a.5.5 0 000 1h8a.5.5 0 000-1z"/>
-        </svg>
+      <a href="https://arxiv.org/" target="_blank">
+        <!-- arXiv icon placeholder -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/></svg>
         arXiv
       </a>
-
-      <!-- Video Button -->
-      <a class="btn" href="https://youtu.be/your-video-id" target="_blank" rel="noopener">
-        <!-- Octicon “video” icon -->
-        <svg class="icon" viewBox="0 0 16 16" aria-hidden="true">
-          <path fill-rule="evenodd"
-                d="M14.615 3.184A1 1 0 0014 3H2a1 1 0 00-1 1v8a1 1 0 001 1h12a1 1 0 001-1V4a1 1 0 00-.385-.816zM2 4h12v8H2V4zm4.5 1.5v5l4-2.5l-4-2.5z"/>
-        </svg>
+      <a href="#" target="_blank">
+        <!-- Video icon -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16v16H4z"/><polygon points="10,8 16,12 10,16" fill="#fff"/></svg>
         Video
       </a>
-
-      <!-- Documentation Button -->
-      <a class="btn" href="https://github.com/Vishaaaaaal/vision-gps-AutonomousRover#documentation" target="_blank" rel="noopener">
-        <!-- Octicon “book” icon -->
-        <svg class="icon" viewBox="0 0 16 16" aria-hidden="true">
-          <path fill-rule="evenodd"
-                d="M1 2.828c.885-.37 2.06-.828 4-.828s3.115.458 4 .828V13.5c-.885-.37-2.06-.828-4-.828s-3.115.458-4 .828V2.828zM5 2c-1.867 0-3.135.454-3.943.853v10.295c.808.399 2.076.853 3.943.853s3.135-.454 3.943-.853V2.853C8.135 2.454 6.867 2 5 2zm6 0c-1.867 0-3.135.454-3.943.853v10.295c.808.399 2.076.853 3.943.853s3.135-.454 3.943-.853V2.853C14.135 2.454 12.867 2 11 2z"/>
-        </svg>
+      <a href="#" target="_blank">
+        <!-- Code icon -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        Code
+      </a>
+      <a href="#" target="_blank">
+        <!-- Documentation icon -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 2h16v20H4z"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/></svg>
         Documentation
       </a>
-
-      <!-- Releases Button -->
-      <a class="btn" href="https://github.com/Vishaaaaaal/vision-gps-AutonomousRover/releases" target="_blank" rel="noopener">
-        <!-- Octicon “tag” icon (representing “Releases”) -->
-        <svg class="icon" viewBox="0 0 16 16" aria-hidden="true">
-          <path fill-rule="evenodd"
-                d="M7.775 1.034a.75.75 0 00-.55 0l-6 2.25a.75.75 0 00-.225 1.352l6 4a.75.75 0 00.725 0l6-4a.75.75 0 00-.225-1.352l-6-2.25zM1.5 4.434v4.901l5.5 3.667V8.101L1.5 4.434zm6.5 7.468L8 13.301l-1.5-.984v3.731a.75.75 0 001.5 0v-1.646l.5.328l.5-.328v1.646a.75.75 0 001.5 0v-3.731zM14.5 4.434l-5.5 3.667v4.901l5.5-3.667V4.434z"/>
-        </svg>
-        Releases
-      </a>
     </div>
-  </div> <!-- /.container -->
-
-  <!-- (Optional) Rest of your page would go here (e.g. Abstract, etc.) -->
-
+  </div>
 </body>
 </html>
