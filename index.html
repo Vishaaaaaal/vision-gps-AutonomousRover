@@ -15,7 +15,7 @@
       align-items: flex-start;
       min-height: 100vh;
       background: #fff;
-      font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
       color: #111827;
     }
     .container {
@@ -30,26 +30,17 @@
       margin-bottom: 0.5rem;
       line-height: 1.2;
     }
-    .authors {
+    .authors, .affiliation {
+      font-size: 1rem;
       margin-bottom: 0.5rem;
-      font-size: 1rem;
-      font-weight: 500;
     }
-    .authors a {
-      color: #3b82f6;
-      text-decoration: none;
-      margin-right: 8px;
-    }
-    .affiliation {
-      margin-bottom: 2rem;
-      color: #374151;
-      font-size: 1rem;
-      font-weight: 400;
-    }
+    .authors a { color: #3b82f6; text-decoration: none; margin-right: 8px; }
+    .affiliation { color: #374151; font-weight: 400; margin-bottom: 2rem; }
     .links {
       display: flex;
       justify-content: space-evenly;
       gap: 1rem;
+      margin-bottom: 2rem;
     }
     .links a {
       display: inline-flex;
@@ -64,65 +55,19 @@
       font-size: 0.95rem;
       transition: background 0.2s;
     }
-    .links a:hover {
-      background: #f9fafb;
-    }
-    .links svg {
-      width: 1.25rem;
-      height: 1.25rem;
-    }
-    .hero-image {
-      margin-top: 2rem;
-      text-align: center;
-    }
-    .hero-image img {
-      width: 100%;
-      height: auto;
-      border-radius: 1rem;
-    }
-    .abstract, .architecture {
-      margin-top: 3rem;
-    }
-    .abstract h2, .architecture h2 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-    .abstract p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #374151;
-    }
-    .architecture h3 {
-      font-size: 1.25rem;
-      font-weight: 500;
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
-      color: #374151;
-    }
-    .architecture h4 {
-      font-size: 1.1rem;
-      font-weight: 500;
-      margin-top: 1rem;
-      margin-bottom: 0.25rem;
-      color: #374151;
-    }
-    .architecture ul {
-      list-style-type: disc;
-      margin-left: 1.5rem;
-      color: #374151;
-    }
-    .architecture code {
-      background: #f3f4f6;
-      padding: 0.2rem 0.4rem;
-      border-radius: 0.25rem;
-      font-family: monospace;
-    }
-    .side-image {
-      float: right;
-      width: 300px;
-      margin: 0 0 1rem 1rem;
-    }
+    .links a:hover { background: #f9fafb; }
+    .hero-image img { width: 100%; height: auto; border-radius: 1rem; margin-bottom: 3rem; }
+    .abstract, .architecture { margin-bottom: 3rem; }
+    .abstract h2, .architecture h2 { font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .abstract p { font-size: 1rem; line-height: 1.6; color: #374151; }
+    .architecture h3 { font-size: 1.25rem; font-weight: 500; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #374151; }
+    .architecture h4 { font-size: 1.1rem; font-weight: 500; margin-top: 1rem; margin-bottom: 0.5rem; color: #374151; }
+    .architecture p, .architecture ul { font-size: 1rem; line-height: 1.6; color: #374151; }
+    .architecture ul { list-style: disc; margin-left: 1.5rem; }
+    .architecture-row { display: flex; align-items: flex-start; }
+    .architecture-content { flex: 1; }
+    .architecture-images { margin-left: 1.5rem; width: 300px; flex-shrink: 0; }
+    .architecture-images img { width: 100%; height: auto; display: block; margin-bottom: 1rem; border-radius: 0.5rem; }
   </style>
 </head>
 <body>
@@ -135,54 +80,78 @@
     </div>
     <div class="affiliation">SRM Institute of Science and Technology</div>
     <div class="links">
+      <!-- Links -->
       <a href="https://github.com/Vishaaaaaal/vision-gps-AutonomousRover/blob/main/MHP%2004%20AUTONOMOUS%20REPORT%20Final.pdf" target="_blank">
+        <!-- Paper SVG -->
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2h7l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/><path d="M13 2v6h6"/></svg>
         Paper
       </a>
       <a href="https://www.youtube.com/" target="_blank">
+        <!-- Video SVG -->
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#FF0000" d="M23.498 6.186a2.963 2.963 0 0 0-2.082-2.096C19.679 3.5 12 3.5 12 3.5s-7.679 0-9.416 .59a2.963 2.963 0 0 0-2.082 2.096A30.058 30.058 0 0 0 0 12a30.058 30.058 0 0 0 .502 5.814 2.963 2.963 0 0 0 2.082 2.096C4.321 20.5 12 20.5 12 20.5s7.679 0 9.416-.59a2.963 2.963 0 0 0 2.082-2.096A30.058 30.058 0 0 0 24 12a30.058 30.058 0 0 0-.502-5.814z"/><path fill="#fff" d="M9.545 15.568v-7.136L16.09 12l-6.545 3.568z"/></svg>
         Video
       </a>
       <a href="https://github.com/Vishaaaaaal/vision-gps-AutonomousRover" target="_blank">
-        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.724-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.234 1.84 1.234 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.467-2.382 1.235-3.222-.123-.303-.535-1.527.117-3.176 0 0 1.008-.323 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.289-1.553 3.295-1.23 3.295-1.23.653 1.649.241 2.873.118 3.176.77.84 1.233 1.912 1.233 3.222 0 4.61-2.804 5.624-5.476 5.921.43.37.823 1.102.823 2.222v3.293c0 .319.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        <!-- Code SVG -->
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.724-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.234 1.84 1.234 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.467-2.382 1.235-3.222-.123-.303-.535-1.527.117-3.176 0 0 1.008-.323 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.289-1.553 3.295-1.23 3.295-1.23.653 1.649.241 2.873.118 3.176.77.84 1.233 1.912 1.233 3.222 0 4.61-2.804 5.624-5.476 5.921.43.37.823 1.102.823 2.222v3.293c0 .319.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
         Code
       </a>
     </div>
 
+    <!-- Hero section -->
     <div class="hero-image">
       <img src="webassets/aa.png" alt="Autonomous Rover collage">
     </div>
 
+    <!-- Abstract -->
     <div class="abstract">
       <h2>Abstract</h2>
       <p>This project introduces a vision-assisted autonomous navigation system for a rover operating in semi-structured outdoor environments. The system integrates GPS-based global planning with real-time perception for dynamic path correction and obstacle avoidance. It utilizes a NEO-M9N module and Google Maps Directions API for waypoint generation, and a ZED 2i stereo camera with a custom YOLOv5 model for object detection and LaneNet for lane following. Depth filtering is incorporated for obstacle detection and an emergency stop system ensures safety. A hybrid control architecture, leveraging ROS Noetic and ROS 2, facilitates communication, with an Arduino Nano controlling steering and throttle via ROS commands. A PyQt5-based GUI provides route visualization and real-time system state monitoring, offering a comprehensive solution for autonomous rover navigation applicable to urban robotics and autonomous delivery platforms.</p>
     </div>
 
-    <div class="hero-image">
-      <img src="webassets/Parts.png" alt="System Diagram">
-    </div>
-
+    <!-- System Architecture -->
     <div class="architecture">
       <h2>System Architecture: Hardware, Software, and Methodology</h2>
+      <!-- Hardware -->
       <h3>Hardware Foundation:</h3>
       <ul>
         <li>The rover is based on a rigid frame platform, custom-welded to house key components, and features a four-bar Ackermann steering mechanism with rear-wheel chain drive. A dedicated mount elevates the ZED 2i stereo camera for an optimal forward field of view.</li>
       </ul>
       <h4>Actuators:</h4>
-      <img src="webassets/Figure_2.png" alt="Actuators Diagram" class="side-image" />
       <ul>
         <li><strong>Steering:</strong> A 12V linear actuator controls the front wheels, extending and retracting linkages within a calibrated range of +22&deg; to &minus;22&deg;.</li>
         <li><strong>Throttle:</strong> A NEMA-23 stepper motor physically twists a handle throttle, connected to a 24V brushed DC motor (MY1016Z2), operating in open-loop mode where steps are mapped to specific speeds.</li>
       </ul>
 
-      <h4>Sensors:</h4>
-      <img src="webassets/map.png" alt="Global Planning Diagram" class="side-image" />
-      <ul>
-        <li><strong>GPS:</strong> A u-blox NEO-M9N GPS receiver provides real-time position data via UART, crucial for global navigation and route planning using the Google Maps Directions API.</li>
-        <li><strong>Vision:</strong> The ZED 2i stereo camera is the primary perception sensor, capturing RGB images, depth maps, and IMU-based orientation data.</li>
-        <li><strong>Feedback:</strong> A rotary potentiometer attached to the steering system provides analog voltage feedback, allowing real-time estimation and correction of the steering angle.</li>
-      </ul>
+      <!-- Software with side images -->
+      <div class="architecture-row">
+        <div class="architecture-content">
+          <h3>Software Architecture and Methodology:</h3>
+          <h4>Global Planning:</h4>
+          <p>The GPS Listener Node establishes serial connection with the NEO-M9N module, parses NMEA sentences for latitude and longitude, and publishes coordinates to <code>/gps_data</code>.</p>
+          <p>The Route Planner Node uses the current GPS location and a user-defined destination to query the Google Maps Directions API, receiving an encoded polyline. This polyline is decoded into waypoints and interpolated to approximately 5-meter intervals for smooth path execution, published on the <code>/route_waypoints</code> topic.</p>
 
-      <h3>Software Architecture and Methodology:</h3>
-      <h4>Global Planning:</h4>
-      <img src="webassets/pathplan.png" alt="Global Planning Diagram" class="side-image" />
+          <h4>Local Perception and Obstacle Avoidance:</h4>
+          <p>The ZED 2i stereo camera provides real-time RGB and depth frames.</p>
+          <p>A custom-trained YOLOv5 model detects dynamic obstacles (e.g., pedestrians, vehicles).</p>
+          <p>LaneNet performs advanced lane detection to identify road boundaries and curvature.</p>
+          <p><strong>Depth Filtering and Failsafe:</strong> For detected objects, a corresponding depth patch is extracted, and if the average depth falls below a critical threshold (e.g., &lt;2 meters), the object is flagged as an immediate threat. A separate failsafe logic continuously monitors the raw depth map, triggering an emergency stop if any object is within 1 meter, regardless of visual detection.</p>
+
+          <h4>Control and Decision Logic:</h4>
+          <p>The Command Publisher Node, based on current position, obstacle feedback, and waypoint proximity, issues commands like <code>throttle</code>, <code>reverse_throttle</code>, or <code>stop</code> to the Arduino Nano via the <code>/nano_control</code> topic.</p>
+          <p>A hybrid decision tree prioritizes safety: emergency stops for depth &lt; 1m, soft stops for in-lane objects with depth &lt; 2m, and steering initiation when lane curvature and global planner confirm a turn. When clear, a throttle command is sent.</p>
+
+          <h4>Visualization and Monitoring:</h4>
+          <p>RViz is used for live visualization of the ZED depth point cloud, object bounding boxes, and lane markings, as well as steering angle and potentiometer data.</p>
+          <p>A PyQt5-based GUI displays a live interactive map (using Folium), showing the current GPS position, planned route, ETA, and allowing interactive destination selection. OpenCV windows also provide live camera feed overlays with object detection and lane curves.</p>
+        </div>
+        <div class="architecture-images">
+          <img src="webassets/actuators.png" alt="Actuators Diagram">
+          <img src="webassets/global_planning.png" alt="Global Planning Diagram">
+          <img src="webassets/control_logic.png" alt="Control and Decision Logic Diagram">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
