@@ -52,14 +52,28 @@
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.724-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.234 1.84 1.234 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.467-2.382 1.235-3.222-.123-.303-.535-1.527.117-3.176 0 0 1.008-.323 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.289-1.553 3.295-1.23 3.295-1.23.653 1.649.241 2.873.118 3.176.77.84 1.233 1.912 1.233 3.222 0 4.61-2.804 5.624-5.476 5.921.43.37.823 1.102.823 2.222v3.293c0 .319.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>Code</a>
     </div>
 
-    <!-- Hero Images -->
-    <div class="hero-image"><img src="webassets/aa.png" alt="Autonomous Rover collage"></div>
-    <div class="hero-image"><img src="webassets/Parts.png" alt="System Diagram"></div>
-
     <!-- Abstract -->
     <div class="abstract">
       <h2>Abstract</h2>
       <p>This project introduces a vision-assisted autonomous navigation system for a rover operating in semi-structured outdoor environments. The system integrates GPS-based global planning with real-time perception for dynamic path correction and obstacle avoidance. It utilizes a NEO-M9N module and Google Maps Directions API for waypoint generation, and a ZED 2i stereo camera with a custom YOLOv5 model for object detection and LaneNet for lane following. Depth filtering is incorporated for obstacle detection and an emergency stop system ensures safety. A hybrid control architecture, leveraging ROS Noetic and ROS 2, facilitates communication, with an Arduino Nano controlling steering and throttle via ROS commands. A PyQt5-based GUI provides route visualization and real-time system state monitoring, offering a comprehensive solution for autonomous rover navigation applicable to urban robotics and autonomous delivery platforms.</p>
+    </div>
+
+    <!-- Hero Image (moved below abstract) -->
+    <div class="hero-image"><img src="webassets/aa.png" alt="Autonomous Rover collage"></div>
+
+    <!-- Rover in Motion (moved before architecture) -->
+    <div class="demonstrations">
+      <h2>Rover in motion</h2>
+      <div class="demo-row">
+        <div class="demo-item">
+          <img src="webassets/obj.gif" alt="Object Detection using YOLO and Depth">
+          <p>Object Detection using Yolo + Depth filtering</p>
+        </div>
+        <div class="demo-item">
+          <img src="webassets/view1.gif" alt="Navigation Stack">
+          <p>Navigation Stack: Lane detection + Object Detection + GPS</p>
+        </div>
+      </div>
     </div>
 
     <!-- System Architecture -->
@@ -74,8 +88,6 @@
         <li><strong>Steering:</strong> A 12V linear actuator controls the front wheels, extending and retracting linkages within a calibrated range of +22&deg; to &minus;22&deg;.</li>
         <li><strong>Throttle:</strong> A NEMA-23 stepper motor physically twists a handle throttle, connected to a 24V brushed DC motor (MY1016Z2), operating in open-loop mode where steps are mapped to specific speeds.</li>
       </ul>
-
-      <!-- Software and Methodology -->
       <div class="architecture-row">
         <div class="architecture-content">
           <h3>Software Architecture and Methodology:</h3>
@@ -102,20 +114,8 @@
       </div>
     </div>
 
-    <!-- Demonstrations Section -->
-    <div class="demonstrations">
-      <h2>Rover in motion</h2>
-      <div class="demo-row">
-        <div class="demo-item">
-          <img src="webassets/obj.gif" alt="Playing with a Rubik's Cube">
-          <p>Object Detection using Yolo + Depth filtering</p>
-        </div>
-        <div class="demo-item">
-          <img src="webassets/view1.gif" alt="Writing its name with a marker">
-          <p>Navigation Stack: Lane detection + Object Detection + GPS</p>
-        </div>
-      </div>
-    </div>
+    <!-- Remaining Hero Image -->
+    <div class="hero-image"><img src="webassets/Parts.png" alt="System Diagram"></div>
   </div>
 </body>
 </html>
