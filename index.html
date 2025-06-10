@@ -18,17 +18,20 @@
     .links a:hover { background: #f9fafb; }
     .links svg { width: 1.25rem; height: 1.25rem; }
     .hero-image img { width: 100%; height: auto; border-radius: 1rem; margin-bottom: 3rem; }
-    .abstract, .architecture { margin-bottom: 3rem; }
-    .abstract h2, .architecture h2 { font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem; }
-    .abstract p { font-size: 1rem; line-height: 1.6; color: #374151; }
+    .abstract, .architecture, .demonstrations { margin-bottom: 3rem; }
+    .abstract h2, .architecture h2, .demonstrations h2 { font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .abstract p, .architecture p, .demonstrations p { font-size: 1rem; line-height: 1.6; color: #374151; }
     .architecture h3 { font-size: 1.25rem; font-weight: 500; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #374151; }
     .architecture h4 { font-size: 1.1rem; font-weight: 500; margin-top: 1rem; margin-bottom: 0.5rem; color: #374151; }
-    .architecture p, .architecture ul { font-size: 1rem; line-height: 1.6; color: #374151; }
-    .architecture ul { list-style: disc; margin-left: 1.5rem; }
+    .architecture ul { list-style: disc; margin-left: 1.5rem; color: #374151; }
     .architecture-row { display: flex; align-items: flex-start; }
     .architecture-content { flex: 1; }
     .architecture-images { margin-left: 1.5rem; width: 300px; flex-shrink: 0; }
     .architecture-images img { width: 100%; height: auto; display: block; margin-bottom: 1rem; border-radius: 0.5rem; }
+    .demo-row { display: flex; gap: 1rem; }
+    .demo-item { flex: 1; text-align: center; }
+    .demo-item img { width: 100%; height: auto; border-radius: 1rem; }
+    .demo-item p { margin-top: 0.5rem; color: #374151; font-size: 1rem; }
   </style>
 </head>
 <body>
@@ -42,27 +45,22 @@
     <div class="affiliation">SRM Institute of Science and Technology</div>
     <div class="links">
       <a href="https://github.com/Vishaaaaaal/vision-gps-AutonomousRover/blob/main/MHP%2004%20AUTONOMOUS%20REPORT%20Final.pdf" target="_blank">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2h7l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/><path d="M13 2v6h6"/></svg>Paper
-      </a>
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2h7l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/><path d="M13 2v6h6"/></svg>Paper</a>
       <a href="https://www.youtube.com/" target="_blank">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#FF0000" d="M23.498 6.186a2.963 2.963 0 0 0-2.082-2.096C19.679 3.5 12 3.5 12 3.5s-7.679 0-9.416 .59a2.963 2.963 0 0 0-2.082 2.096A30.058 30.058 0 0 0 0 12a30.058 30.058 0 0 0 .502 5.814 2.963 2.963 0 0 0 2.082 2.096C4.321 20.5 12 20.5 12 20.5s7.679 0 9.416-.59a2.963 2.963 0 0 0 2.082-2.096A30.058 30.058 0 0 0 24 12a30.058 30.058 0 0 0-.502-5.814z"/><path fill="#fff" d="M9.545 15.568v-7.136L16.09 12l-6.545 3.568z"/></svg>Video
-      </a>
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#FF0000" d="M23.498 6.186a2.963 2.963 0 0 0-2.082-2.096C19.679 3.5 12 3.5 12 3.5s-7.679 0-9.416 .59a2.963 2.963 0 0 0-2.082 2.096A30.058 30.058 0 0 0 0 12a30.058 30.058 0 0 0 .502 5.814 2.963 2.963 0 0 0 2.082 2.096C4.321 20.5 12 20.5 12 20.5s7.679 0 9.416-.59a2.963 2.963 0 0 0 2.082-2.096A30.058 30.058 0 0 0 24 12a30.058 30.058 0 0 0-.502-5.814z"/><path fill="#fff" d="M9.545 15.568v-7.136L16.09 12l-6.545 3.568z"/></svg>Video</a>
       <a href="https://github.com/Vishaaaaaal/vision-gps-AutonomousRover" target="_blank">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.724-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.234 1.84 1.234 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.467-2.382 1.235-3.222-.123-.303-.535-1.527.117-3.176 0 0 1.008-.323 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.289-1.553 3.295-1.23 3.295-1.23.653 1.649.241 2.873.118 3.176.77.84 1.233 1.912 1.233 3.222 0 4.61-2.804 5.624-5.476 5.921.43.37.823 1.102.823 2.222v3.293c0 .319.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>Code
-      </a>
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.724-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.084-.729.084-.729 1.205.084 1.84 1.234 1.84 1.234 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.467-2.382 1.235-3.222-.123-.303-.535-1.527.117-3.176 0 0 1.008-.323 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.289-1.553 3.295-1.23 3.295-1.23.653 1.649.241 2.873.118 3.176.77.84 1.233 1.912 1.233 3.222 0 4.61-2.804 5.624-5.476 5.921.43.37.823 1.102.823 2.222v3.293c0 .319.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>Code</a>
     </div>
 
-    <!-- Hero image AA -->
+    <!-- Hero Images -->
     <div class="hero-image"><img src="webassets/aa.png" alt="Autonomous Rover collage"></div>
+    <div class="hero-image"><img src="webassets/Parts.png" alt="System Diagram"></div>
 
     <!-- Abstract -->
     <div class="abstract">
       <h2>Abstract</h2>
       <p>This project introduces a vision-assisted autonomous navigation system for a rover operating in semi-structured outdoor environments. The system integrates GPS-based global planning with real-time perception for dynamic path correction and obstacle avoidance. It utilizes a NEO-M9N module and Google Maps Directions API for waypoint generation, and a ZED 2i stereo camera with a custom YOLOv5 model for object detection and LaneNet for lane following. Depth filtering is incorporated for obstacle detection and an emergency stop system ensures safety. A hybrid control architecture, leveraging ROS Noetic and ROS 2, facilitates communication, with an Arduino Nano controlling steering and throttle via ROS commands. A PyQt5-based GUI provides route visualization and real-time system state monitoring, offering a comprehensive solution for autonomous rover navigation applicable to urban robotics and autonomous delivery platforms.</p>
     </div>
-
-    <!-- Hero image Parts after Abstract -->
-    <div class="hero-image"><img src="webassets/Parts.png" alt="System Diagram"></div>
 
     <!-- System Architecture -->
     <div class="architecture">
@@ -97,9 +95,24 @@
           <p>A PyQt5-based GUI displays a live interactive map (using Folium), showing the current GPS position, planned route, ETA, and allowing interactive destination selection. OpenCV windows also provide live camera feed overlays with object detection and lane curves.</p>
         </div>
         <div class="architecture-images">
-          <img src="webassets/Figure_2.png" alt="Actuators Diagram">
-          <img src="webassets/pathplan.png" alt="Global Planning Diagram">
-          <img src="webassets/map.png" alt="Control and Decision Logic Diagram">
+          <img src="webassets/actuators.png" alt="Actuators Diagram">
+          <img src="webassets/global_planning.png" alt="Global Planning Diagram">
+          <img src="webassets/control_logic.png" alt="Control and Decision Logic Diagram">
+        </div>
+      </div>
+    </div>
+
+    <!-- Demonstrations Section -->
+    <div class="demonstrations">
+      <h2>Demonstrations</h2>
+      <div class="demo-row">
+        <div class="demo-item">
+          <img src="webassets/demo1.gif" alt="Playing with a Rubik's Cube">
+          <p>Playing with a Rubik's Cube</p>
+        </div>
+        <div class="demo-item">
+          <img src="webassets/demo2.gif" alt="Writing its name with a marker">
+          <p>Writing its name with a marker</p>
         </div>
       </div>
     </div>
