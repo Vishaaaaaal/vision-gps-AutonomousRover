@@ -52,15 +52,17 @@
       </a>
     </div>
 
-    <!-- Hero Images -->
+    <!-- Hero image AA -->
     <div class="hero-image"><img src="webassets/aa.png" alt="Autonomous Rover collage"></div>
-    <div class="hero-image"><img src="webassets/Parts.png" alt="System Diagram"></div>
 
     <!-- Abstract -->
     <div class="abstract">
       <h2>Abstract</h2>
       <p>This project introduces a vision-assisted autonomous navigation system for a rover operating in semi-structured outdoor environments. The system integrates GPS-based global planning with real-time perception for dynamic path correction and obstacle avoidance. It utilizes a NEO-M9N module and Google Maps Directions API for waypoint generation, and a ZED 2i stereo camera with a custom YOLOv5 model for object detection and LaneNet for lane following. Depth filtering is incorporated for obstacle detection and an emergency stop system ensures safety. A hybrid control architecture, leveraging ROS Noetic and ROS 2, facilitates communication, with an Arduino Nano controlling steering and throttle via ROS commands. A PyQt5-based GUI provides route visualization and real-time system state monitoring, offering a comprehensive solution for autonomous rover navigation applicable to urban robotics and autonomous delivery platforms.</p>
     </div>
+
+    <!-- Hero image Parts after Abstract -->
+    <div class="hero-image"><img src="webassets/Parts.png" alt="System Diagram"></div>
 
     <!-- System Architecture -->
     <div class="architecture">
@@ -82,17 +84,14 @@
           <h4>Global Planning:</h4>
           <p>The GPS Listener Node establishes serial connection with the NEO-M9N module, parses NMEA sentences for latitude and longitude, and publishes coordinates to <code>/gps_data</code>.</p>
           <p>The Route Planner Node uses the current GPS location and a user-defined destination to query the Google Maps Directions API, receiving an encoded polyline. This polyline is decoded into waypoints and interpolated to approximately 5-meter intervals for smooth path execution, published on the <code>/route_waypoints</code> topic.</p>
-
           <h4>Local Perception and Obstacle Avoidance:</h4>
           <p>The ZED 2i stereo camera provides real-time RGB and depth frames.</p>
           <p>A custom-trained YOLOv5 model detects dynamic obstacles (e.g., pedestrians, vehicles).</p>
           <p>LaneNet performs advanced lane detection to identify road boundaries and curvature.</p>
           <p><strong>Depth Filtering and Failsafe:</strong> For detected objects, a corresponding depth patch is extracted, and if the average depth falls below a critical threshold (e.g., &lt;2 meters), the object is flagged as an immediate threat. A separate failsafe logic continuously monitors the raw depth map, triggering an emergency stop if any object is within 1 meter, regardless of visual detection.</p>
-
           <h4>Control and Decision Logic:</h4>
           <p>The Command Publisher Node, based on current position, obstacle feedback, and waypoint proximity, issues commands like <code>throttle</code>, <code>reverse_throttle</code>, or <code>stop</code> to the Arduino Nano via the <code>/nano_control</code> topic.</p>
           <p>A hybrid decision tree prioritizes safety: emergency stops for depth &lt; 1m, soft stops for in-lane objects with depth &lt; 2m, and steering initiation when lane curvature and global planner confirm a turn. When clear, a throttle command is sent.</p>
-
           <h4>Visualization and Monitoring:</h4>
           <p>RViz is used for live visualization of the ZED depth point cloud, object bounding boxes, and lane markings, as well as steering angle and potentiometer data.</p>
           <p>A PyQt5-based GUI displays a live interactive map (using Folium), showing the current GPS position, planned route, ETA, and allowing interactive destination selection. OpenCV windows also provide live camera feed overlays with object detection and lane curves.</p>
