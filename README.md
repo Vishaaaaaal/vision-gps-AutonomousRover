@@ -65,7 +65,7 @@ Developed as a final-year B.Tech project under the **Department of Mechatronics 
 ## ⚙️ Software Stack
 
 - **ROS Noetic (ROS 1)**: For planning, GPS, actuation, and GUI
-- **ROS 2 Foxy**: For ZED vision and YOLOv5 inference
+- **ROS 2 Foxy**: For ZED vision and YOLOv11 inference
 - **Socket Bridge**: ROS 1 ↔ ROS 2 communication (Python TCP)
 - **YOLOv5**: Custom-trained model for road obstacles
 - **LaneNet**: Curved lane detection using polynomial fits
