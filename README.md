@@ -20,7 +20,7 @@ Developed as a final-year B.Tech project under the **Department of Mechatronics 
 ## 🎯 Key Features
 
 - **Dynamic GPS path planning** with Google Maps API
-- **custom trained YOLOv5 obstacle detection along with depth-filtered logic for precision **
+- **Custom trained YOLOv11 obstacle detection along with depth-filtered logic for precision**
 - **LaneNet-based curved lane detection**
 - **ROS 1/2 hybrid architecture** bridged via TCP sockets
 - **Live GUI**: Map tracking, ETA, and manual rerouting
